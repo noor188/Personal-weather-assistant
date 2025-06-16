@@ -12,7 +12,8 @@ public class Location {
     private Integer Id;
     @Enumerated(EnumType.STRING)
     private LocationName locationName;
-    private Long temperature;
+    @Column(nullable = false)
+    private Float temperature;
     private double lon;
     private double lat;
 
@@ -32,11 +33,11 @@ public class Location {
         this.locationName = locationName;
     }
 
-    public Long getTemperature() {
+    public Float getTemperature() {
         return temperature;
     }
 
-    public void setTemperature(Long temperature) {
+    public void setTemperature(Float temperature) {
         this.temperature = temperature;
     }
 
